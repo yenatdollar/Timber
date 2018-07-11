@@ -1,0 +1,101 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Verdana;\f2\fmodern\fcharset0 Courier;
+}
+{\colortbl;\red255\green255\blue255;\red83\green83\blue83;}
+\margl1440\margr1440\vieww15020\viewh5600\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+{{\NeXTGraphic TimbreLogo copy.png \width2200 \height3860
+}¬}\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 2018\
+\
+\pard\pardeftab720
+\cf0 Timbre\'a0is Arduino IDE Code which converts a light intensity from a Color Sensor Module into a value of Frequency within a musical scale. The hue assigns the scale of sound, and the value determines the octaves.
+\f1 \cf2 \
+
+\f0 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\b \cf0 ZIP Contents
+\b0 \
+	Timbre.ino\
+	Timbre Manual\
+	TimberPD.zip\
+	LICENSE.txt\
+\
+
+\b Requirements\
+\pard\pardeftab720\partightenfactor0
+
+\b0 \cf0 	- hardware -\
+	Computer (MacOSX10.9 up)\
+	Arduino UNO\
+	TCS 3200 Color Sensor / {\field{\*\fldinst{HYPERLINK "http://www.mouser.com/catalog/specsheets/TCS3200-E11.pdf"}}{\fldrslt http://www.mouser.com/catalog/specsheets/TCS3200-E11.pdf}}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 	USB Cable \
+	Jumper Wires (Female/Male)\
+\pard\pardeftab720\partightenfactor0
+\cf0 	- software -\
+	Arduino IDE / {\field{\*\fldinst{HYPERLINK "https://www.arduino.cc/en/Main/Software"}}{\fldrslt https://www.arduino.cc/en/Main/Software}}\
+	TimerOne / {\field{\*\fldinst{HYPERLINK "https://code.google.com/archive/p/arduino-timerone/downloads"}}{\fldrslt https://code.google.com/archive/p/arduino-timerone/downloads}}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 	- ect -\
+\pard\pardeftab720\partightenfactor0
+\cf0 	Clear Plastic Cups\
+	Paints (White and Colors)\
+	Container\
+	Duct Tape\
+\
+\pard\pardeftab720\partightenfactor0
+
+\b \cf0 Tutorial
+\b0 \
+	1.	connect Arduino UNO and TCS 3200 with jumper wire as below\
+		GND&LED - GND, OE - GND, S0 - D6, S1 - D5, S2 - D4, S3 - D3, OUT - D2\
+	2.	cut a container an Openning for USB cable\
+	3.	cut the top an opening and attach the Color Sensor with duct tape, cover the surrounding area to block a light coming in \
+	4.	connect Arduino UNO\'92s USB port to an available USB port on your computer\
+	5.	open Arduino IDE on your computer\
+	6.	download TimerOne-r11.zip, and add Timer One r11 to Arduino Library\
+	7.	open and upload \'93Timber.ino\'94 to Arduino UNO\
+	8.	place a Clear Plastic Cup with White paint on TCS3200 to adjust White Balance at the first use\
+	9.	click to open Serial Monitor, set the baud rate to 115200\
+	10.	once you see as below, White Balance is set\
+		255\
+		255\
+		255\
+		1\
+		1\
+		1568	\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 	11.	replace with another Clear Plastic Cup with your self-mixed paint on TCS3200 to get the color value\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\b \cf0 Reference\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\b0 \cf0 	- code -\
+\pard\pardeftab720\partightenfactor0
+\cf0 	{\field{\*\fldinst{HYPERLINK "http://elecfreaks.com/1666.html"}}{\fldrslt elecfreaks.com/1666.html}} (a sample code and explanation for measuring the RGB values) \
+	{\field{\*\fldinst{HYPERLINK "http://elecfreaks.com/wiki/index.php?title=Color_Sensor_Module"}}{\fldrslt elecfreaks.com/wiki/index.php?title=Color_Sensor_Module}} (a sample code and explanation for defining octave scale)\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 	- color study -\
+\pard\pardeftab720\partightenfactor0
+\cf0 	{\field{\*\fldinst{HYPERLINK "http://en.wikipedia.org/wiki/Hue"}}{\fldrslt en.wikipedia.org/wiki/Hue}} (an equation for determining hue of color) \
+	{\field{\*\fldinst{HYPERLINK "http://en.wikipedia.org/wiki/HSL_and_HSV"}}{\fldrslt en.wikipedia.org/wiki/HSL_and_HSV}} (an equation for determining value of color) \
+	{\field{\*\fldinst{HYPERLINK "http://lunarplanner.com/Harmonics/planetary-harmonics.html"}}{\fldrslt lunarplanner.com/Harmonics/planetary-harmonics.html}} (a research of the relationship between color and sound)\
+\pard\pardeftab720
+\cf0 \
+\pard\pardeftab720
+
+\b \cf0 License
+\b0  \
+\pard\pardeftab720
+
+\f2 \cf0   
+\f0  	This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.\
+}
